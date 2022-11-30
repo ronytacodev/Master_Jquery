@@ -28,4 +28,18 @@ $(document).ready(function(){
     // $('img').attr('src', 'https://releases.jquery.com/jquery-wp-content/themes/jquery/content/books/learning-jquery-4th-ed.jpg');
 
     // $('img:last').attr('width', '50');
+
+    // var parrafo = $('#resultado p');
+
+    // $('.btn-primary').click(function(){
+    //     parrafo.addClass('display-4');
+    // })
+
+    // $('.btn-danger').click(function () { 
+    //     parrafo.removeClass('display-4');        
+    // });
+
+    // $('.btn-warning').click(function () { 
+    //    parrafo.toggleClass('display-4');         
+    // });
 });
