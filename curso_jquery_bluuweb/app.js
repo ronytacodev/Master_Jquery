@@ -13,8 +13,19 @@ $(document).ready(function(){
     // $('.container h1:first').html('cambio de texto');
     // $('.container h1:last').html('cambio de texto');
 
-    $('#idh1').addClass('text-danger');
-    $('#idh1').removeClass('display-4');
+    // $('#idh1').addClass('text-danger');
+    // $('#idh1').removeClass('display-4');
 
-    // me quede en el min 20:25
+    // $('#contenido').append('<h1>Este es un elemento al final</h1>');
+    // $('#contenido').prepend('<h1>Este es un elemento al principio</h1>');
+    
+    // $('#color-azul').css('color', 'blue');
+    // $('#color-azul').css({color: 'blue', background: 'salmon', padding: '20px'});
+
+    // // $('#color-azul').remove();
+    // $('#color-azul').hide();
+
+    // $('img').attr('src', 'https://releases.jquery.com/jquery-wp-content/themes/jquery/content/books/learning-jquery-4th-ed.jpg');
+
+    // $('img:last').attr('width', '50');
 });
