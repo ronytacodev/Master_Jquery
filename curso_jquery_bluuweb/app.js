@@ -50,21 +50,42 @@ $(document).ready(function(){
     
 //    })
 
-    var resultado = $('#resultado');
+// *********************
+    // var resultado = $('#resultado');
+
+    // $('.btn-primary').click(function(){
+    //     // resultado.hide(1000);
+    //     resultado.fadeOut(3000);
+    // });
+
+    // $('.btn-danger').click(function () { 
+    //     // resultado.show();
+    //     resultado.fadeIn(2000);
+    // });
+
+    // $('.btn-warning').click(function () { 
+    //     resultado.toggle(1000);
+    // });
+
+    // *********************
+
+// ******************
+
+var resultado = $('#resultado');
 
     $('.btn-primary').click(function(){
-        // resultado.hide(1000);
-        resultado.fadeOut(3000);
+        resultado.animate({
+            left:'250px',
+            opacity: '0.5',
+            height: '+=150px',
+            width: '+=150px'
+        },3000, function(){
+            resultado.animate({
+                left:'-250px', 
+                opacity: '1',
+                height: '-=150px',
+                width: '-=150px'
+            },1000)
+        });
     });
-
-    $('.btn-danger').click(function () { 
-        // resultado.show();
-        resultado.fadeIn(2000);
-    });
-
-    $('.btn-warning').click(function () { 
-        resultado.toggle(1000);
-    });
-
-
 });
