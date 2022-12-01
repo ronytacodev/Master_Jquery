@@ -43,12 +43,28 @@ $(document).ready(function(){
     //    parrafo.toggleClass('display-4');         
     // });
 
-   $('#formulario').submit(function (e) { 
-    e.preventDefault();
-    var nombre = $('#nombre').val();
-    console.log(nombre);
+//    $('#formulario').submit(function (e) { 
+//     e.preventDefault();
+//     var nombre = $('#nombre').val();
+//     console.log(nombre);
     
-   })
+//    })
+
+    var resultado = $('#resultado');
+
+    $('.btn-primary').click(function(){
+        // resultado.hide(1000);
+        resultado.fadeOut(3000);
+    });
+
+    $('.btn-danger').click(function () { 
+        // resultado.show();
+        resultado.fadeIn(2000);
+    });
+
+    $('.btn-warning').click(function () { 
+        resultado.toggle(1000);
+    });
 
 
 });
