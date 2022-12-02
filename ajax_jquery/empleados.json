@@ -1,17 +1,36 @@
-[
-    {
-        "nombre": "Juan",
-        "puesto": "programador",
-        "edad": 22
-    },
-    {
-        "nombre": "Maria",
-        "puesto": "programadora",
-        "edad": 24
-    },
-    {
-        "nombre": "Pedro",
-        "puesto": "diseñador",
-        "edad": 25
-    }
-]
+{
+    "empleados": [
+        {
+            "nombre": "Juan",
+            "puesto": "programador",
+            "edad": 22
+        },
+        {
+            "nombre": "Maria",
+            "puesto": "programadora",
+            "edad": 24
+        },
+        {
+            "nombre": "Pedro",
+            "puesto": "diseñador",
+            "edad": 25
+        }
+    ],
+    "temporales": [
+        {
+            "nombre": "Pepe",
+            "puesto": "programador",
+            "edad": 22
+        },
+        {
+            "nombre": "Mario",
+            "puesto": "programador",
+            "edad": 24
+        },
+        {
+            "nombre": "Ana",
+            "puesto": "diseñador",
+            "edad": 25
+        }
+    ]
+}

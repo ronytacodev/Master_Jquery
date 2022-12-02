@@ -39,13 +39,20 @@ $(document).ready(function () {
 
     $('#leerGetJSON').click(function (e) { 
         e.preventDefault();
-        $.get("empleados.txt", function(data) {
-            data= JSON.parse(data);
-            console.log(data);
-        });
 
-        $.getJSON("empleados.txt", function(data) {
-            console.log(data);
+        // $.get("empleados.txt", function(data) {
+        //     data= JSON.parse(data);
+        //     console.log(data);
+        // });
+
+        $.getJSON("empleados.json", function(data) {
+            console.log(data.empleados);
+            $('#listaEmpleados').html('');
+            $.each(data.temporales, function (index, item) { 
+                $('#listaEmpleados').html($('#listaEmpleados').html()+ `
+                   <li>${item.nombre} -- ${item.puesto} </li>
+                   `);
+           });
         });
 
     });
