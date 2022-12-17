@@ -76,26 +76,39 @@ $(document).ready(function () {
 
 
    // ajax  //
-   $('#ajax').click(function (e) { 
-    e.preventDefault();
-    $('#listaEmpleados').html('');
-    $.ajax({
-        url: 'empleados.json',
-        type: 'get',
-        dataType: 'json',
-        success: function(data) {
+//    $('#ajax').click(function (e) { 
+//     e.preventDefault();
+//     $('#listaEmpleados').html('');
+//     $.ajax({
+//         url: 'empleados.json',
+//         type: 'get',
+//         dataType: 'json',
+//         success: function(data) {
+//             console.log(data);
+//             $.each(data.empleados, function (i, item) { 
+//                  $('#listaEmpleados').html($('#listaEmpleados').html()+`
+//                  <li> ${item.nombre} </li>
+//                  `);
+//             });
+//         },
+//         error:function(xhr, status, error){
+//             console.log(xhr);
+//             console.log(status);
+//             console.log(error);
+//         }
+//     })
+//    });
+    // video 8
+    $('#convertir').click(function (e) { 
+        e.preventDefault();
+        let operacion = $('#operacion').val();
+        let texto = $('#texto').val();
+        $.get("http://localhost/ajax_jquery/jquery_ajax/convertir.php",
+        {'operacion': operacion, 'texto':texto}, function(data){
             console.log(data);
-            $.each(data.empleados, function (i, item) { 
-                 $('#listaEmpleados').html($('#listaEmpleados').html()+`
-                 <li> ${item.nombre} </li>
-                 `);
-            });
-        },
-        error:function(xhr, status, error){
-            console.log(xhr);
-            console.log(status);
-            console.log(error);
-        }
-    })
-   });
+            $('#listaEmpleados').html(data);
+        });
+    });
+
 });
+
