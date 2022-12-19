@@ -117,10 +117,22 @@ $(document).ready(function () {
         let puesto = $('#puesto').val();
         $.post("http://localhost/ajax_jquery/jquery_ajax/convertir.php", {'nombre':nombre,'puesto':puesto},
             function (data, textStatus, jqXHR) {
+                $('#resultado').parent().removeClass('d-none');
                 $('#resultado').html(data);
-            }
-        );
+                }
+            ).done(function(){
+                $('#estado').html("Exito");
+                $('#estado').addClass('alert-success');
+                $('#estado').removeClass('d-none');
+            }).fail(function(){
+                $('#estado').html("Fallo");
+                $('#estado').addClass('alert-danger');
+                $('#estado').removeClass('d-none'); 
+            }).always(function(){
+                console.log("finalizado");
+            });
+        });
     });
 
-});
+
 
