@@ -99,15 +99,27 @@ $(document).ready(function () {
 //     })
 //    });
     // video 8
-    $('#convertir').click(function (e) { 
+    // $('#convertir').click(function (e) { 
+    //     e.preventDefault();
+    //     let operacion = $('#operacion').val();
+    //     let texto = $('#texto').val();
+    //     $.get("http://localhost/ajax_jquery/jquery_ajax/convertir.php",
+    //     {'operacion': operacion, 'texto':texto}, function(data){
+    //         console.log(data);
+    //         $('#listaEmpleados').html(data);
+    //     });
+    // });
+
+    // video 9
+    $('form').submit(function (e) { 
         e.preventDefault();
-        let operacion = $('#operacion').val();
-        let texto = $('#texto').val();
-        $.get("http://localhost/ajax_jquery/jquery_ajax/convertir.php",
-        {'operacion': operacion, 'texto':texto}, function(data){
-            console.log(data);
-            $('#listaEmpleados').html(data);
-        });
+        let nombre = $('#nombre').val();
+        let puesto = $('#puesto').val();
+        $.post("http://localhost/ajax_jquery/jquery_ajax/convertir.php", {'nombre':nombre,'puesto':puesto},
+            function (data, textStatus, jqXHR) {
+                $('#resultado').html(data);
+            }
+        );
     });
 
 });
