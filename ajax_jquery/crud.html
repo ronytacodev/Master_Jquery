@@ -13,6 +13,11 @@
     <!--FONTAWESOME  -->
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+        integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -20,12 +25,18 @@
     <div class="container mt-3">
 
         <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link active" id="nav-lista-tab" data-toggle="tab" href="#nav-home" role="tab"
-                    aria-controls="nav-home" aria-selected="true">Lista</a>
-                <a class="nav-item nav-link" id="nav-datos-tab" data-toggle="tab" href="#nav-profile" role="tab"
-                    aria-controls="nav-profile" aria-selected="false">Crear</a>
-            </div>
+
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-item nav-link active" id="lista-tab" data-toggle="tab" href="#nav-home" role="tab"
+                        aria-controls="nav-home" aria-selected="true">Lista</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item nav-link" id="datos-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                        aria-controls="nav-profile" aria-selected="false">Crear</a>
+                </li>
+            </ul>
+
         </nav>
 
         <div class="tab-content" id="nav-tabContent">
@@ -52,7 +63,6 @@
             </div>
 
         </div>
-
 
 
     </div>
