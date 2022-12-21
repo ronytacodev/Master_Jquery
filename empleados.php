@@ -34,6 +34,14 @@
             echo "0";
         }
     }
+    else if($_REQUEST['accion']=="borrar") {
+        $sql="DELETE FROM empleados WHERE id='".$_POST["id"]."' "; 
+        if($mysql->query($sql) === TRUE){
+            echo "1";
+        }else {
+            echo "0";
+        }
+    }
     $mysql->close();
 
 ?>
