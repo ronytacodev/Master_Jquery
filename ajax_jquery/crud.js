@@ -7,7 +7,7 @@ $(document).ready(function () {
                 // console.log(data);
                 $.each(data, function (index, item) { 
                      $('#listaEmpleados').html($('#listaEmpleados').html()+`
-                     <li><i class="fa fa-pencil-square-o" aria-hidden="true" 
+                     <li><i class="fa-regular fa-pen-to-square" 
                      data-id='${item.id}'
                      data-nombre='${item.nombre}'
                      data-puesto='${item.puesto}'
@@ -37,7 +37,7 @@ $(document).ready(function () {
             });
     });
 
-    $(document).on('click','.fa-pencil-square-o', function(){
+    $(document).on('click','.fa-pen-to-square', function(){
         console.log($(this).data('id'));
         $('#crearEmpleados').addClass('d-none');
         $('#editarEmpleados').removeClass('d-none');
@@ -56,7 +56,7 @@ $(document).ready(function () {
         let edad = $('#edad').val();
         let id = $('#id').val();
         $.post('http://localhost/ajax_jquery/jquery_ajax/empleados.php',
-        {"accion":editar, "nombre":nombre, "puesto":puesto, "edad":edad},
+        {"accion":"editar", "nombre":nombre, "puesto":puesto, "edad":edad, "id":id},
         function(data){
             if(data=="1"){
 
@@ -70,5 +70,4 @@ $(document).ready(function () {
     });
 
 
-    // me quede en el min 15:58 del video 14
 });
