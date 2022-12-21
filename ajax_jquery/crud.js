@@ -12,7 +12,9 @@ $(document).ready(function () {
                      data-nombre='${item.nombre}'
                      data-puesto='${item.puesto}'
                      data-edad='${item.edad}'
-                     ></i> ${item.nombre} -- ${item.puesto} -- ${item.edad}</li>
+                     ></i>
+                     <i class="fa-solid fa-trash" data-id='${item.id}'></i>
+                     ${item.nombre} -- ${item.puesto} -- ${item.edad}</li>
                      `);
                 });
             }
@@ -47,6 +49,19 @@ $(document).ready(function () {
         $('#puesto').val($(this).data('puesto'));
         $('#edad').val($(this).data('edad'));
         $('#id').val($(this).data('id'));
+    });
+
+    $(document).on('click','.fa-trash', function(){
+        let id=$(this).data('id');
+        const linea = $(this).parent();
+        // console.log(id);
+        $.post("http://localhost/ajax_jquery/jquery_ajax/empleados.php",
+            {"accion":"borrar", "id":id},
+            function (data) {
+                // console.log(data);
+                linea.remove();
+            }
+        );
     });
 
     $('#editarEmpleados').click(function (e) { 
